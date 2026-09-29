@@ -1,0 +1,4 @@
+{
+  "schema_version": 1,
+  "required": ["id", "title", "content", "entity_type", "source_uri", "source_title", "retrieved_at", "license", "confidence"]
+}

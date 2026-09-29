@@ -1,0 +1,6 @@
+interface:
+  display_name: "星陨助手"
+  short_description: "显式读取本地账号并分析培养与装备"
+  default_prompt: "分析我的账号练度、装备和下一步培养计划。"
+policy:
+  allow_implicit_invocation: false

@@ -1,0 +1,29 @@
+name: test
+
+on:
+  push:
+    branches: [main, "feat/**"]
+  pull_request:
+
+permissions:
+  contents: read
+
+env:
+  PYTHONUTF8: "1"
+
+jobs:
+  test:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Unit tests
+        run: python -m unittest discover -s tests -v
+      - name: Validate plugin
+        run: python scripts/validate-plugin.py
+      - name: Validate dependency lock
+        run: python scripts/verify-dependencies.py
+      - name: Scan for private data
+        run: python scripts/check-secrets.py

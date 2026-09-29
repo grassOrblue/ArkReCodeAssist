@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "dependencies": {
+    "lucima-tools": {
+      "repository": "https://github.com/StardustChocolate/lucima-tools.git",
+      "commit": "0c72790ec7dd58dc92e77f2d0a581975708a9b7e",
+      "license": "GPL-3.0-only",
+      "usage": "构建只读账号桥接程序"
+    },
+    "g8-plugins": {
+      "repository": "https://github.com/dafaic0730/g8_plugins.git",
+      "commit": "aac8a907285cc6fb905e1b055114516acabd385b",
+      "license": "MIT",
+      "usage": "装备评分规则与角色配置数据"
+    }
+  }
+}
