@@ -22,6 +22,21 @@ class PluginContractTests(unittest.TestCase):
         )
         self.assertEqual(marketplace["name"], "ark-recode-assist-marketplace")
 
+    def test_windows_powershell_scripts_use_utf8_bom(self) -> None:
+        scripts = (
+            ROOT / "scripts" / "install.ps1",
+            ROOT / "scripts" / "build-release.ps1",
+            ROOT / "plugins" / "ark-recode-assist" / "scripts" / "invoke.ps1",
+        )
+        for script in scripts:
+            self.assertTrue(script.read_bytes().startswith(b"\xef\xbb\xbf"), script)
+
+    def test_skill_uses_windows_powershell_compatible_invocation(self) -> None:
+        skill = (
+            ROOT / "plugins" / "ark-recode-assist" / "skills" / "ark-recode-assist" / "SKILL.md"
+        ).read_text(encoding="utf-8")
+        self.assertNotIn("invoke.ps1 -- <参数>", skill)
+
     def test_private_files_are_ignored(self) -> None:
         ignore = (ROOT / ".gitignore").read_text(encoding="utf-8")
         for value in ("settings.local.json", "account-cache/", "*.snapshot.json"):

@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import json
+import re
 from pathlib import Path
 
 
@@ -12,7 +13,7 @@ def main() -> int:
     manifest = json.loads((plugin_root / ".codex-plugin" / "plugin.json").read_text(encoding="utf-8"))
     marketplace = json.loads((ROOT / ".agents" / "plugins" / "marketplace.json").read_text(encoding="utf-8"))
     assert manifest["name"] == "ark-recode-assist"
-    assert manifest["version"].startswith("0.1.0")
+    assert re.fullmatch(r"\d+\.\d+\.\d+(?:[-+][0-9A-Za-z.-]+)?", manifest["version"])
     assert manifest["interface"]["displayName"] == "星陨助手"
     assert (plugin_root / "skills" / "ark-recode-assist" / "SKILL.md").is_file()
     metadata = (plugin_root / "skills" / "ark-recode-assist" / "agents" / "openai.yaml").read_text(encoding="utf-8")

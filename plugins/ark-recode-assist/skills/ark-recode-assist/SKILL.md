@@ -21,7 +21,7 @@ description: "仅在用户显式选择或点名星陨助手时，读取本地星
 从本技能目录解析插件根目录，并调用：
 
 ```powershell
-powershell -ExecutionPolicy Bypass -File <插件根目录>\scripts\invoke.ps1 -- <参数>
+powershell -ExecutionPolicy Bypass -File <插件根目录>\scripts\invoke.ps1 <参数>
 ```
 
 不要猜测可执行文件路径，也不要直接运行 LucimaTools 的开发接口。
