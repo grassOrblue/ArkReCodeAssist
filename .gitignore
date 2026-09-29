@@ -1,0 +1,30 @@
+# Local/private data
+settings.local.json
+data/
+g8_data/
+account-cache/
+reports/
+logs/
+*.snapshot.json
+
+# Build output and downloaded dependencies
+.deps/
+.venv/
+build/
+dist/
+artifacts/
+*.spec
+plugins/ark-recode-assist/bin/*.exe
+plugins/ark-recode-assist/bin/*.dll
+plugins/ark-recode-assist/bin/*.zip
+plugins/ark-recode-assist/bin/*.sha256
+components/g8-analyzer/src/g8_analyzer/data/characters.json
+
+# Python caches
+__pycache__/
+*.py[cod]
+.pytest_cache/
+
+# Local IDE files
+.idea/
+.vscode/

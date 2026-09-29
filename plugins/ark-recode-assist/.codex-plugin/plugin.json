@@ -1,0 +1,18 @@
+{
+  "name": "ark-recode-assist",
+  "version": "0.1.0",
+  "description": "显式调用的星陨计划账号、装备与培养分析助手",
+  "author": {
+    "name": "grassOrblue"
+  },
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "星陨助手",
+    "shortDescription": "读取本地账号快照并分析角色、装备和培养计划",
+    "longDescription": "仅在显式选择时运行。通过LucimaTools读取脱敏账号快照，结合G8评分和本地攻略知识给出培养建议。",
+    "developerName": "grassOrblue",
+    "category": "Productivity",
+    "capabilities": ["Read", "Analysis"],
+    "defaultPrompt": "分析我的账号练度、装备和下一步培养计划。"
+  }
+}

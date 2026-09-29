@@ -1,0 +1,14 @@
+[
+  {
+    "id": "scoring-g8-gear-v1",
+    "title": "G8装备评分来源",
+    "content": "G8评分用于衡量装备副属性效率，必须与LucimaTools评分分开展示；不同算法的数值不可直接互换。",
+    "entity_type": "mechanic",
+    "entity_id": "equipment-score",
+    "source_uri": "https://github.com/dafaic0730/g8_plugins",
+    "source_title": "g8_plugins",
+    "retrieved_at": "2026-09-29T00:00:00Z",
+    "license": "MIT",
+    "confidence": 1.0
+  }
+]

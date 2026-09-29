@@ -1,0 +1,20 @@
+{
+  "name": "ark-recode-assist-marketplace",
+  "interface": {
+    "displayName": "星陨助手"
+  },
+  "plugins": [
+    {
+      "name": "ark-recode-assist",
+      "source": {
+        "source": "local",
+        "path": "./plugins/ark-recode-assist"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Productivity"
+    }
+  ]
+}
